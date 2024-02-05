@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Book List</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+</head>
+<body>
+    <table class="table table-striped table-dark">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">name</th>
+            <th scope="col">quantity</th>
+            <th scope="col">price</th>
+            <th scope="col">author</th>
+            <th scope="col">published_date</th>
+
+          </tr>
+        </thead>
+                {% for book in books %}
+        <tbody>
+          <tr>
+            <th scope="row">{{book.id}}</th>
+            <td>{{book.name}}</td>
+            <td>{{book.quantity}}</td>
+            <td>{{book.price}}</td>
+            <td>{{book.author}}</td>
+            <td>{{book.published_date}}</td>
+
+          </tr>
+         
+        </tbody>
+                {% endfor %}
+      </table>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha384-ZvpUoIxFY3AH9C/pW1s5fZc/8a9d+I5NU3DeM2Q8r4YjqBq4QFq9ROuLGTtWI5i6" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-rhHoG2bWqPAA1Spqn1LdYxPIKXvgIVmFjz5l6U5aVZ9QcPBb/KBmYS1NqFvVpUJf" crossorigin="anonymous"></script>
+
+</body>
+</html>
